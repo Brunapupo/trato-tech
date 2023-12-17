@@ -1,14 +1,13 @@
 import styles from "./Home.module.scss";
-import Header from "./../../components/Header";
+import Header from "../../components/Header";
 import relogio from "../../assets/inicial.png";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-
 export default function Home() {
   const navigate = useNavigate();
   //hook do redux espera uma arrow functions com estado
-  const categorias = useSelector(state => state.categorias);
+  const categorias = useSelector((state) => state.categorias);
   return (
     <div>
       <Header
